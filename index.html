@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bruno Arana Arellano — escritos</title>
+<meta name="description" content="Textos cortos, narrativa urbana y reflexiones desde la Ciudad de México.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" data-view="home">Bruno Arana Arellano</a>
+  <nav class="main-nav">
+    <a data-view="home" class="active">Inicio</a>
+    <a data-const="sangre">Sangre</a>
+    <a data-const="cielo">Cielo</a>
+    <a data-const="humo">Humo</a>
+    <a data-view="about">Sobre</a>
+  </nav>
+</header>
+
+<section id="view-home" class="view active">
+  <div class="intro">
+    <h1>Cada quién decide <em>qué vida quiere recordar.</em></h1>
+    <p>Textos cortos, narrativa urbana y reflexiones desde la Ciudad de México. Lo que aquí vive se ordena en tres atmósferas: lo crudo, lo idílico y lo que no se deja ver del todo.</p>
+  </div>
+
+  <div class="grafo-section">
+    <div class="grafo-label-row">
+      <div class="grafo-label">Mapa de textos</div>
+      <div class="grafo-hint">click en un nodo para leer</div>
+    </div>
+    <div class="grafo-wrap">
+      <svg id="grafo" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+        <g id="auras"></g>
+        <g id="conexiones"></g>
+        <g id="nodos"></g>
+        <g id="labels"></g>
+        <g id="const-names"></g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="constelaciones-lista">
+    <h2>Constelaciones</h2>
+    <div class="constelaciones-grid">
+      <div class="constelacion-item sangre" data-const="sangre">
+        <div class="num">01 — Sangre</div>
+        <h3>Sangre</h3>
+        <div class="descripcion">Lo crudo, lo real, lo que duele en el cuerpo.</div>
+        <div class="count" data-count="sangre"></div>
+      </div>
+      <div class="constelacion-item cielo" data-const="cielo">
+        <div class="num">02 — Cielo</div>
+        <h3>Cielo</h3>
+        <div class="descripcion">Lo romántico, lo idílico, la ensoñación.</div>
+        <div class="count" data-count="cielo"></div>
+      </div>
+      <div class="constelacion-item humo" data-const="humo">
+        <div class="num">03 — Humo</div>
+        <h3>Humo</h3>
+        <div class="descripcion">La memoria que miente, las máscaras, lo que aparentamos.</div>
+        <div class="count" data-count="humo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="view-constelacion" class="view">
+  <a class="const-back" data-view="home">← volver</a>
+  <div class="const-header">
+    <h1 id="const-title"></h1>
+    <p class="descripcion" id="const-desc"></p>
+  </div>
+  <div class="textos-grid" id="textos-list"></div>
+</section>
+
+<section id="view-texto" class="view">
+  <a class="texto-back" id="texto-back-link">← volver</a>
+  <div class="texto-header">
+    <div class="const-tag" id="texto-const-tag"></div>
+    <h1 id="texto-title"></h1>
+    <div class="fecha" id="texto-fecha"></div>
+  </div>
+  <div class="texto-body" id="texto-body"></div>
+  <div class="texto-footer">
+    <div class="firma">Bruno Arana Arellano</div>
+  </div>
+</section>
+
+<section id="view-about" class="view">
+  <div class="about-wrap">
+    <div class="about-epigrafe">¿Sabes qué estaba pensando?</div>
+    <h1>Sobre</h1>
+    <p>Hola, soy Bruno. Hace poco me di cuenta que escribir se había convertido en una necesidad para poder encontrar algo de orden entre todo lo que había en mi cabeza. Creé este espacio para resguardar todo eso y ponerlo en algún lugar para sacármelo de encima.</p>
+    <p>Gracias por pasarte por acá. Espero que encuentres algo que resuene contigo, y si no, avísame para tomarnos un café.</p>
+    <p class="about-contacto"><a href="mailto:brunosabesque@gmail.com">brunosabesque@gmail.com</a></p>
+  </div>
+</section>
+
+<script src="js/textos.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

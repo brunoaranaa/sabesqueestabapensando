@@ -1,0 +1,495 @@
+:root {
+  --bg: #0e0d0c;
+  --bg-elevated: #161513;
+  --ink: #f4efe5;
+  --ink-soft: #cfc8b9;
+  --ink-muted: #a59f91;
+  --ink-faint: #6b6558;
+  --accent-sangre: #d8463a;
+  --accent-cielo: #9fb1c8;
+  --accent-humo: #c8b48f;
+  --line: rgba(244, 239, 229, 0.08);
+  --line-strong: rgba(244, 239, 229, 0.2);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter Tight', -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--accent-sangre); color: var(--ink); }
+
+header.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: linear-gradient(to bottom, var(--bg) 60%, transparent);
+  pointer-events: none;
+}
+
+header.site-header .brand,
+header.site-header nav {
+  pointer-events: auto;
+}
+
+.brand {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.brand:hover { color: var(--ink); }
+
+nav.main-nav {
+  display: flex;
+  gap: 2.2rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+nav.main-nav a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+nav.main-nav a:hover, nav.main-nav a.active { color: var(--ink); }
+
+.view { display: none; min-height: 100vh; }
+.view.active { display: block; }
+
+#view-home {
+  padding: 7rem 3rem 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.intro {
+  margin-bottom: 4rem;
+  max-width: 780px;
+}
+
+.intro h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 5.2vw, 4.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+
+.intro h1 em {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.intro p {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.grafo-section { margin-bottom: 5rem; }
+
+.grafo-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.grafo-label {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.grafo-hint {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+.grafo-wrap {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(ellipse at center, rgba(244, 239, 229, 0.015) 0%, transparent 70%);
+}
+
+#grafo { width: 100%; height: auto; display: block; }
+
+.nodo { cursor: pointer; transition: r 0.25s, opacity 0.25s; }
+.nodo:hover { opacity: 0.7; }
+
+.nodo-label {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.nodo-label.faint { opacity: 0.6; }
+
+.conexion {
+  stroke: var(--line-strong);
+  stroke-width: 0.6;
+  fill: none;
+}
+
+.const-aura { opacity: 0.05; }
+
+.const-name {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.constelaciones-lista h2 {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 2rem;
+  font-weight: 500;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.constelaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.constelacion-item {
+  padding: 2.5rem 2rem 2.5rem 0;
+  cursor: pointer;
+  transition: padding-left 0.4s;
+  border-right: 1px solid var(--line);
+}
+.constelacion-item:last-child { border-right: none; }
+.constelacion-item:not(:first-child) { padding-left: 2rem; }
+.constelacion-item:hover { background: rgba(244, 239, 229, 0.02); }
+
+.constelacion-item .num {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.16em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.constelacion-item h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.constelacion-item.sangre h3 { color: var(--accent-sangre); }
+.constelacion-item.cielo h3 { color: var(--accent-cielo); }
+.constelacion-item.humo h3 { color: var(--accent-humo); }
+
+.constelacion-item .descripcion {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.constelacion-item .count {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#view-constelacion {
+  padding: 7rem 3rem 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.const-header {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.const-back, .texto-back {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+  display: inline-block;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+.const-back:hover, .texto-back:hover { color: var(--ink); }
+
+.const-header h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+#view-constelacion[data-current="sangre"] .const-header h1 { color: var(--accent-sangre); }
+#view-constelacion[data-current="cielo"] .const-header h1 { color: var(--accent-cielo); }
+#view-constelacion[data-current="humo"] .const-header h1 { color: var(--accent-humo); }
+
+.const-header .descripcion {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 1.25rem;
+  max-width: 620px;
+}
+
+.textos-grid { display: grid; gap: 0; }
+
+.texto-card {
+  display: block;
+  padding: 2.6rem 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: padding-left 0.4s;
+}
+.texto-card:hover { padding-left: 1.5rem; }
+
+.texto-card .meta {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+}
+
+.texto-card h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+}
+
+.texto-card .preview {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.5;
+  max-width: 620px;
+}
+
+#view-texto {
+  padding: 7rem 3rem 6rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.texto-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.texto-header .const-tag {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+#view-texto[data-current="sangre"] .const-tag { color: var(--accent-sangre); }
+#view-texto[data-current="cielo"] .const-tag { color: var(--accent-cielo); }
+#view-texto[data-current="humo"] .const-tag { color: var(--accent-humo); }
+
+.texto-header h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.texto-header .fecha {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.texto-body {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  line-height: 1.75;
+  color: var(--ink);
+  text-align: left;
+}
+
+.texto-body p {
+  margin-bottom: 0;
+  text-indent: 2em;
+}
+
+.texto-body p.first-para,
+.texto-body > p:first-child {
+  text-indent: 0;
+}
+
+.texto-body .ornament {
+  text-align: center;
+  margin: 2.2rem 0;
+  color: var(--ink-faint);
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+}
+
+.texto-footer {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.texto-footer .firma {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+#view-about {
+  padding: 7rem 3rem 6rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-wrap .about-epigrafe {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-muted);
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+  letter-spacing: 0.01em;
+}
+
+.about-wrap h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+.about-wrap p {
+  font-size: 1.18rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.about-wrap p.about-contacto {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.about-wrap a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent-sangre);
+  text-decoration: none;
+  transition: color 0.3s;
+  padding-bottom: 2px;
+}
+.about-wrap a:hover { color: var(--accent-sangre); }
+
+@media (max-width: 880px) {
+  header.site-header { padding: 1.2rem 1.5rem; }
+  .brand { font-size: 0.74rem; }
+  nav.main-nav { gap: 1.2rem; font-size: 0.72rem; }
+  #view-home, #view-constelacion, #view-texto, #view-about { padding: 6rem 1.5rem 3rem; }
+  .constelaciones-grid { grid-template-columns: 1fr; }
+  .constelacion-item {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 2rem 0 !important;
+  }
+  .constelacion-item:last-child { border-bottom: none; }
+  .constelacion-item h3 { font-size: 2.2rem; }
+  .texto-body { font-size: 1.1rem; }
+  .nodo-label { font-size: 11px; }
+}
+
+@media (max-width: 600px) {
+  header.site-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  nav.main-nav { gap: 0.9rem; font-size: 0.66rem; }
+}
