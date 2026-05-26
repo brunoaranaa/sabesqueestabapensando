@@ -24,15 +24,15 @@
 const constelaciones = {
   sangre: {
     nombre: "Sangre",
-    descripcion: "Lo crudo, lo real, lo que duele en el cuerpo."
+    descripcion: "Lo que arde por dentro."
   },
   cielo: {
     nombre: "Cielo",
-    descripcion: "Lo romántico, lo idílico, la ensoñación, el otro como refugio."
+    descripcion: "Los refugios que encontré cuando todo ardía demasiado."
   },
   humo: {
     nombre: "Humo",
-    descripcion: "La memoria que miente, las máscaras, lo que aparentamos."
+    descripcion: "Todo lo que parece ser."
   }
 };
 
