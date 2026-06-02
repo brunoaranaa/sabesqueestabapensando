@@ -41,7 +41,7 @@ const textos = [
   {
     id: "manual-del-buen-mentiroso",
     titulo: "Manual del buen mentiroso",
-    fecha: "2024-06-01",
+    fecha: "2026-06-01",
     constelacion: "humo",
     preview: "La mentira no habita en el momento en que se manifiesta. El arte de mentir está en la anticipación.",
     contenido: `La gente suele pensar que mentir radica en decir algo que no es real y mantener la cara inmóvil. Que si giran los ojos a la derecha se verían descubiertos porque en algún lugar escucharon que eso era indicio de que lo que estaban diciendo era una falsedad. Quien lo afirme está equivocado.
