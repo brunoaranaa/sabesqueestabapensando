@@ -39,6 +39,27 @@ const constelaciones = {
 const textos = [
 
   {
+    {
+    id: "manual-del-buen-mentiroso",
+    titulo: "Manual del buen mentiroso",
+    fecha: "2024-06-01",
+    constelacion: "humo",
+    preview: "La mentira no habita en el momento en que se manifiesta. El arte de mentir está en la anticipación.",
+    contenido: `La gente suele pensar que mentir radica en decir algo que no es real y mantener la cara inmóvil. Que si giran los ojos a la derecha se verían descubiertos porque en algún lugar escucharon que eso era indicio de que lo que estaban diciendo era una falsedad. Quien lo afirme está equivocado.
+La mentira no habita en el momento en que se manifiesta en el mundo exterior, no; el arte de mentir está en la anticipación de la mentira misma, en la idea que se representa en el mentiroso, muchas veces semanas, incluso meses atrás, cuando sabe que eventualmente tendrá que hacerle creer a alguien algo que no es verdad.
+Una mentira es consistente sólo cuando es colocada dentro de un sistema de hechos de manera congruente. Cuando no es necesario demostrarla para que sea aceptada. Cuando uno hizo bien el trabajo, su única tarea es soltar una afirmación en el lugar que ya le fue construido con antelación. Es decir, que para mentir y tener éxito, debieron haberse dicho muchísimas verdades.
+Cuando el mentiroso entra a una habitación, lo hace sabiendo que es probable que tenga que mentir. No es algo seguro, ni es consciente sobre qué versaría su falsedad, pero es su trabajo prepararse el terreno en caso de tener que hacerlo.
+La confianza es el primer medio que se debe conseguir. Es el agua sobre la que los barcos se desplazan de un punto a otro. Sin ella, no hay verdad ni mentira que logre mantenerse a flote. Si alguien pretende enfrentarse a quien siente desconfianza hacia él, deberá demostrar incluso que el Sol sale una vez al día. Sí, es extremista, y lo es porque la confianza es indispensable para aquel que miente. No es que la confianza sea suficiente para hacer valer una mentira, pero lubrica el engranaje donde todo lo demás sucede.
+El cómo conseguirla da paso a la anticipación. Habrá ocasiones en que el mentiroso salga de la habitación sin haber pronunciado engaño alguno, pero el cien por ciento de las veces lo hará con la confianza del resto en el bolsillo. Sabe que en algún otro momento le resultará útil. El mentiroso debe aprender a ser paciente, pues quien se precipita pierde.
+Si alguien llega a una reunión, y lo hace a la hora pactada, no tiene necesidad de excusarse, eso lo sabría cualquiera. Ahí es donde el mentiroso comienza el acto. Es obvio que la lluvia genera que el tráfico aumente, por lo tanto, es normal que alguien se retrase a consecuencia de ello. Si esa persona fue puntual, ya es un avance, si encima se recalca que lo fue a pesar de la lluvia y del caos, se refuerza la idea de la confiabilidad. Dos a cero.
+Luego se sientan las bases, se entrega cierta información, normalmente de carácter personal, que pueda ser verificable, quizá mostrando una foto en el teléfono, o incluso dejando que algún factor externo lo verifique por él. Hasta este momento, la constante es la verdad.
+Luego viene la aceptación. La mayoría de las personas entrega su confianza a quien le haga sentir honesto. La validación ajena es quizá la parte más importante para ganarse a la gente. Por ello, se debe ser muy cuidadoso. Hay una delgada línea entre validar a alguien y resultar siendo un adulador. Se le debe hacer saber a la otra persona que también debe ganarse tu confianza, encontrando alguna forma de cuestionarle y ponerle en un lugar donde deba encontrar la manera de explicar tal o cual cosa, por insignificante que esta sea. Cuando le dejas convencerte, ya saben que la honestidad se pone a prueba. ¿Qué mentiroso pone sobre la mesa la posibilidad de ser cuestionado?
+Ahora dos personas sinceras conversan de frente. Nadie quiere sacar provecho del otro y las defensas están en el suelo. El terreno está preparado para la mentira.
+Aquí dos puertas se colocan frente al mentiroso: detrás de la primera, la verdad tiene peso suficiente para que el engranaje se mantenga girando. La mejor mentira es la que no necesita pronunciarse.
+La segunda puerta le entrega la falsedad en la mano. Lo único que resta es ponerla en su lugar.`
+  },
+
+  {
     id: "sabor-a-hierro",
     titulo: "Sabor a hierro",
     fecha: "2024-11-15",
