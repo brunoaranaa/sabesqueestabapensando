@@ -39,7 +39,6 @@ const constelaciones = {
 const textos = [
 
   {
-    {
     id: "manual-del-buen-mentiroso",
     titulo: "Manual del buen mentiroso",
     fecha: "2024-06-01",
