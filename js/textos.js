@@ -43,6 +43,19 @@ const constelaciones = {
 const textos = [
 
   {
+    id: "sabado-4am",
+    titulo: "Sábado, 4 a.m.",
+    fecha: "2026-06-21",
+    constelacion: "insomnio",
+    preview: "Durante el día todo fluye. Son las noches las que me atormentan.",
+    contenido: `Durante el día todo fluye. Mientras el sol ilumina la bóveda celeste, el peligro no es real. Sí, de vez en cuando aparece una risa que se extravió en las calles, pero nada grave.
+El mundo parece haber encontrado el nuevo rumbo. Un destino hasta ahora desconocido que comienza a vislumbrarse a cada paso.
+Son las noches las que me atormentan. Cuando las voces se refugian detrás de las paredes y es hora de apagar la luz de la habitación. Entonces regresa la imagen de su recuerdo. No hablamos cuando lo hace, nunca lo hacemos. Solo se aparece a mi lado, diciéndome con miradas todo aquello que no tuvimos tiempo de decirnos. Y su piel se reconoce con la mía, como dos trozos de un mapa que fue partido a la mitad, como si ambas recordáramos un lugar que yo ya no sé nombrar.
+Es su piel, y la respiración, la sensación de hogar la que no logra disolverse. A diferencia de las promesas y las esperanzas que en algún momento se filtraron entre los poros de mi ser, el cuerpo y el alma no olvidan fácil.
+Hay noches en que prefiero olvidarme de olvidarle, pues solo así podría ser justo que se haya ido.`
+  },
+  
+  {
     id: "manual-del-buen-mentiroso",
     titulo: "Manual del buen mentiroso",
     fecha: "2026-06-01",
