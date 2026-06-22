@@ -230,6 +230,7 @@ nav.main-nav a:hover, nav.main-nav a.active { color: var(--ink); }
 .constelacion-item.sangre h3 { color: var(--accent-sangre); }
 .constelacion-item.cielo h3 { color: var(--accent-cielo); }
 .constelacion-item.humo h3 { color: var(--accent-humo); }
+.constelacion-item.insomnio h3 { color: var(--accent-insomnio); }
 
 .constelacion-item .descripcion {
   font-style: italic;
@@ -286,6 +287,7 @@ nav.main-nav a:hover, nav.main-nav a.active { color: var(--ink); }
 #view-constelacion[data-current="sangre"] .const-header h1 { color: var(--accent-sangre); }
 #view-constelacion[data-current="cielo"] .const-header h1 { color: var(--accent-cielo); }
 #view-constelacion[data-current="humo"] .const-header h1 { color: var(--accent-humo); }
+#view-constelacion[data-current="insomnio"] .const-header h1 { color: var(--accent-insomnio); }
 
 .const-header .descripcion {
   font-style: italic;
