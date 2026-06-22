@@ -26,9 +26,10 @@ function renderGrafo() {
   const constNames = document.getElementById('const-names');
 
   const centros = {
-    sangre: { x: 280, y: 280, radio: 130 },
-    cielo:  { x: 820, y: 240, radio: 200 },
-    humo:   { x: 540, y: 540, radio: 100 }
+    sangre:   { x: 220, y: 240, radio: 110 },
+    cielo:    { x: 780, y: 200, radio: 180 },
+    humo:     { x: 480, y: 480, radio: 90 },
+    insomnio: { x: 950, y: 550, radio: 90 }
   };
 
   Object.keys(constelaciones).forEach(key => {
