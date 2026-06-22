@@ -7,7 +7,8 @@
 const coloresHex = {
   sangre: '#d8463a',
   cielo: '#9fb1c8',
-  humo: '#c8b48f'
+  humo: '#c8b48f',
+  insomnio: '#8b7fae'
 };
 
 function renderConteos() {
@@ -49,7 +50,7 @@ function renderGrafo() {
     const centro = centros[key];
     textosConst.forEach((t, i) => {
       const angulo = (i / textosConst.length) * Math.PI * 2 +
-                     (key === 'cielo' ? 0.4 : key === 'humo' ? 1.1 : 0.7);
+                     (key === 'cielo' ? 0.4 : key === 'humo' ? 1.1 : key === 'insomnio' ? 0.2 : 0.7);
       const radioVariable = centro.radio * (0.7 + (i % 3) * 0.15);
       const x = centro.x + Math.cos(angulo) * radioVariable;
       const y = centro.y + Math.sin(angulo) * radioVariable * 0.85;
