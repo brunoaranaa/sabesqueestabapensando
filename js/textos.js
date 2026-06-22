@@ -34,6 +34,10 @@ const constelaciones = {
     nombre: "Humo",
     descripcion: "Todo lo que parece ser."
   }
+  insomnio: {
+    nombre: "Insomnio",
+    descripcion: "Lo que el cuerpo no logra olvidar cuando el mundo se queda en silencio."
+  }
 };
 
 const textos = [
